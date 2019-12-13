@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Navbar from './navbar';
-import '../../styles/app.scss';
+import Navbar from 'ui/src/components/common/navbar';
+import 'ui/src/styles/app.scss';
 
 function Layout(props: any) {
   return (

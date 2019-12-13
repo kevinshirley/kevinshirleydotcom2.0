@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeSection1 from './home-section-1';
-import HomeSection2 from './home-section-2';
+import HomeSection1 from 'ui/src/components/home/home-section-1';
+import HomeSection2 from 'ui/src/components/home/home-section-2';
 
 function Home() {
   return (

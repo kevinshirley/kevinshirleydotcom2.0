@@ -1,8 +1,8 @@
 import React from 'react';
-import PortfolioSection1 from './portfolio-section-1';
-import PortfolioSection2 from './portfolio-section-2';
+import PortfolioSection1 from 'ui/src/components/portfolio/portfolio-section-1';
+import PortfolioSection2 from 'ui/src/components/portfolio/portfolio-section-2';
 
-function Home() {
+function Portfolio() {
   return (
     <React.Fragment>
       <PortfolioSection1 />
@@ -11,4 +11,4 @@ function Home() {
   );
 };
 
-export default Home;
+export default Portfolio;
