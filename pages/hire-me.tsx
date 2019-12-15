@@ -1,13 +1,12 @@
 import React from 'react';
 import Layout from 'ui/src/components/common/layout';
-import PortfolioPage from 'ui/src/components/portfolio';
 
-function Portfolio() {
+function HireMe() {
   return (
     <Layout>
-      <PortfolioPage />
+      Hire Me page
     </Layout>
   );
 };
 
-export default Portfolio;
+export default HireMe;

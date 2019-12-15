@@ -1,11 +1,18 @@
 import React from 'react';
-import bgImg from 'ui/src/assets/images/do-something-great.jpg';
+import devTeam from 'ui/src/assets/images/development-team.svg';
 
 function HomeSection1() {
   return (
     <div className='home-section-1'>
-      <div className='background-image-container'>
-        <img src={bgImg} alt=""/>
+      <div className="form">
+        <h2>Build Your Online Platform</h2>
+        <input type="text" placeholder="Your name"/>
+        <input type="text" placeholder="Email"/>
+        <input type="phone" placeholder="Phone"/>
+        <button>Submit</button>
+      </div>
+      <div className="flat-design-image">
+        <img src={devTeam} alt="Development Team"/>
       </div>
     </div>
   );

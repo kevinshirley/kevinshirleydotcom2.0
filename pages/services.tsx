@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from 'ui/src/components/common/layout';
-import PortfolioPage from 'ui/src/components/portfolio';
+// import PortfolioPage from 'ui/src/components/portfolio';
 
-function Portfolio() {
+function Services() {
   return (
     <Layout>
-      <PortfolioPage />
+      services page
     </Layout>
   );
 };
 
-export default Portfolio;
+export default Services;
