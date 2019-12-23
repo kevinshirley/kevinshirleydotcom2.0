@@ -1,5 +1,6 @@
 // Variables
 $white: #fff;
+$black16: rgb(16, 16, 16);
 $teal900: #004d40;
 $teal650: #00695f;
 $teal500: #009688;
@@ -25,6 +26,10 @@ $grey900: #212121;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
 
+@mixin full-width {
+  width: 100%;
+}
+
 // Navbar settings
 $navbar_top: $teal650;
 $navbar_bottom: $teal500;
@@ -42,7 +47,7 @@ a {
 }
 
 .container {
-  width: 100%;
+  @include full-width;
 }
 
 .row {
@@ -64,16 +69,16 @@ a {
 
 // Components
 .navbar-wrapper {
-  width: 100%;
+  @include full-width;
 
   .top-navbar {
-    width: 100%;
+    @include full-width;
     height: 24px;
     background: $navbar_top;
   }
 
   .navbar {
-    width: 100%;
+    @include full-width;
     min-height: 56px;
     background: $navbar_bottom;
     display: flex;
@@ -104,7 +109,7 @@ a {
         height: 40px;
   
         img {
-          width: 100%;
+          @include full-width;
           height: 100%;
         }
       }
@@ -112,7 +117,7 @@ a {
       .links {
         display: flex;
         justify-content: flex-end;
-        width: 100%;
+        @include full-width;
         margin-block-start: 0;
         margin-block-end: 0;
         margin-inline-end: 0px;
@@ -141,7 +146,7 @@ a {
 }
 
 .home-section-1 {
-  width: 100%;
+  @include full-width;
   height: auto;
   @include home-section-1-bg;
   display: flex;
@@ -210,18 +215,18 @@ a {
     height: auto;
     width: 800px;
     @media screen and (max-width: 650px) {
-      width: 100%;
+      @include full-width;
     }
 
     img {
-      width: 100%;
+      @include full-width;
       height: 100%;
     }
   }
 }
 
 .home-section-2 {
-  width: 100%;
+  @include full-width;
   height: auto;
   display: flex;
   justify-content: center;
@@ -273,7 +278,7 @@ a {
       }
 
       @media screen and (max-width: 450px) {
-        width: 100%;
+        @include full-width;
       }
 
       h3, p {
@@ -311,14 +316,14 @@ a {
 .home-section-3 {
   .background-image-container {
     img {
-      width: 100%;
+      @include full-width;
       height: 100%;
     }
   }
 }
 
 .home-section-4 {
-  width: 100%;
+  @include full-width;
   height: auto;
   display: flex;
   justify-content: center;
@@ -348,7 +353,7 @@ a {
       }
 
       @media screen and (max-width: 450px) {
-        width: 100%;
+        @include full-width;
       }
 
       h3, p {
@@ -381,4 +386,75 @@ a {
       }
     }
   }
+}
+
+.footer-section-1 {
+  @include full-width;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+
+    .label {
+      color: $teal900;
+      font-weight: bold;
+    }
+  
+    .icons {
+      @include full-width;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+  
+      a {
+        svg {
+          color: $black16;
+        }
+  
+        &:nth-child(1) {
+          svg {
+            font-size: 2.5em;
+          }
+        }
+  
+        &:nth-child(2) {
+          svg {
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-section-2 {
+  @include full-width;
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: $teal900;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.footer-section-3 {
+  @include full-width;
+  background: $teal900;
+  color: $white;
+  padding: 8px 0 8px 10px;
+  text-align: center;
 }

@@ -22,17 +22,41 @@ export const MENU: JSX.Element = (
   <Icon className="menu-core-icon">menu</Icon>
 );
 
-export const TOP_DRAWER_MENU = {
-  0: <HomeIcon />,
-  1: PORTFOLIO_ICON,
-  2: <StorefrontOutlinedIcon />,
-  3: <InfoIcon />
-};
+export const TOP_DRAWER_MENU = [
+  {
+    icon: <HomeIcon />,
+    label: 'Home',
+    pathname: '/',
+  },
+  {
+    icon: PORTFOLIO_ICON,
+    label: 'Portfolio',
+    pathname: '/portfolio',
+  },
+  {
+    icon: <StorefrontOutlinedIcon />,
+    label: 'Services',
+    pathname: '/services',
+  },
+];
 
-export const BOTTOM_DRAWER_MENU = {
-  0: <ContactPhoneIcon />,
-  1: <StorefrontOutlinedIcon />,
-};
+export const BOTTOM_DRAWER_MENU = [
+  {
+    icon: <InfoIcon />,
+    label: 'About',
+    pathname: '/about',
+  },
+  {
+    icon: <ContactPhoneIcon />,
+    label: 'Contact',
+    pathname: '/contact',
+  },
+  {
+    icon: <StorefrontOutlinedIcon />,
+    label: 'Hire Me',
+    pathname: '/hire-me',
+  },
+];
 
 export const FIRST_HOME_FORM = {
   NAME: <PersonOutlineIcon />,

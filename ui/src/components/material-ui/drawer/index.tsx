@@ -68,22 +68,22 @@ export default function TemporaryDrawer() {
       }}
     >
       <List>
-        {['Home', 'Portfolio', 'Services', 'About'].map((text, index) => (
-          <Link href={drawerLink(text)} key={text}>
+        {TOP_DRAWER_MENU.map((obj, index) => (
+          <Link href={obj.pathname} key={index}>
             <ListItem button>
-              <ListItemIcon>{TOP_DRAWER_MENU[index]}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{obj.icon}</ListItemIcon>
+              <ListItemText primary={obj.label} />
             </ListItem>
           </Link>
         ))}
       </List>
       <Divider />
       <List>
-        {['Contact', 'Hire Me'].map((text, index) => (
-          <Link href={drawerLink(text)} key={text}>
+        {BOTTOM_DRAWER_MENU.map((obj, index) => (
+          <Link href={obj.pathname} key={index}>
             <ListItem button>
-              <ListItemIcon>{BOTTOM_DRAWER_MENU[index]}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{obj.icon}</ListItemIcon>
+              <ListItemText primary={obj.label} />
             </ListItem>
           </Link>
         ))}
