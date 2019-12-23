@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/Link';
+import Link from 'ui/src/components/common/link';
 import logo from 'ui/src/assets/images/kevinshirley.png';
 import MaterialDrawer from 'ui/src/components/material-ui/drawer';
 import { IPHONE_ICON } from 'ui/src/components/material-ui/icons';
@@ -15,11 +15,11 @@ function Navbar() {
           </div>
           <div className="logo">
             <Link href="/">
-              <a><img src={logo} alt="Kevin Shirley | Software Developer"/></a>
+              <img src={logo} alt="Kevin Shirley | Software Developer"/>
             </Link>
           </div>
           <ul className="links">
-            <li className="link"><Link href="portfolio"><a>{IPHONE_ICON}</a></Link></li>
+            <li className="link"><Link href="portfolio">{IPHONE_ICON}</Link></li>
           </ul>
         </div>
       </div>

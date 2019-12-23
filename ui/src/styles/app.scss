@@ -1,3 +1,4 @@
+// Variables
 $white: #fff;
 $teal900: #004d40;
 $teal650: #00695f;
@@ -5,6 +6,9 @@ $teal500: #009688;
 $teal300: #4db6ac;
 $teal100: #b2dfdb;
 
+$grey900: #212121;
+
+// Mixins
 @mixin home-section-1-bg {
   background: rgb(0,150,136);
   background: -moz-linear-gradient(212deg, rgba(0,150,136,1) 0%, rgba(0,150,136,1) 35%, rgba(178,223,219,1) 100%);
@@ -13,21 +17,52 @@ $teal100: #b2dfdb;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#009688",endColorstr="#b2dfdb",GradientType=1);
 }
 
+@mixin home-section-2-bg {
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0.4864320728291317) 0%, rgba(255,255,255,1) 79%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.4864320728291317) 0%, rgba(255,255,255,1) 79%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0.4864320728291317) 0%, rgba(255,255,255,1) 79%, rgba(255,255,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+}
+
+// Navbar settings
 $navbar_top: $teal650;
 $navbar_bottom: $teal500;
-
 $navLinkMargin: 10px;
 
+// General
 html, body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
 }
 
+.row {
+  display: block;
+}
+
+#rounded-button {
+  background: $teal900 !important;
+  cursor: pointer;
+
+  .MuiFab-label {
+    color: $white !important;
+
+    svg {
+      font-size: 1.4em;
+    }
+  }
+}
+
+// Components
 .navbar-wrapper {
   width: 100%;
 
@@ -43,6 +78,9 @@ html, body {
     background: $navbar_bottom;
     display: flex;
     justify-content: center;
+    @media screen and (min-width: 600px) {
+      min-height: 64px;
+    }
     
     .wrapper {
       width: 95%;
@@ -104,23 +142,76 @@ html, body {
 
 .home-section-1 {
   width: 100%;
-  height: 500px;
+  height: auto;
   @include home-section-1-bg;
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 20px;
+
+  @media screen and (max-width: 970px) {
+    padding-bottom: 80px;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
 
   .form {
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
+    margin-bottom: 20px;
 
     h2 {
       color: $white;
+      font-size: 2.4em;
+      margin-block-end: 10px;
+    }
+
+    .sub-title {
+      color: $white;
+    }
+
+    input {
+      width: 200px;
+    }
+
+    button {
+      width: 200px;
+    }
+
+    .input-field {
+      color: $white;
+      margin-bottom: 25px;
+
+      .MuiInput-underline:before {
+        border-bottom: 1px solid $white;
+        
+        .MuiInputBase-input::placeholder {
+          color: $white;
+        }
+
+        :-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: $white;
+         }
+         
+         ::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: $white;
+         }
+      }
     }
   }
 
   .flat-design-image {
-    height: 100%;
-    width: 600px;
+    height: auto;
+    width: 800px;
+    @media screen and (max-width: 650px) {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -131,7 +222,90 @@ html, body {
 
 .home-section-2 {
   width: 100%;
-  // border: 3px solid #110a3a;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    @media screen and (max-width: 820px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image {
+      padding-top: 15px;
+
+      .row {
+        &:nth-child(1), &:nth-child(3) {
+          padding-left: 20px;
+        }
+
+        svg {
+          font-size: 3em;
+          margin-right: 25px;
+          margin-bottom: 13px;
+
+          @media screen and (max-width: 910px) {
+            font-size: 2em;
+          }
+
+          @media screen and (max-width: 820px) {
+            font-size: 3em;
+          }
+
+          @media screen and (max-width: 390px) {
+            font-size: 2em;
+          }
+        }
+      }
+    }
+
+    .text {
+      margin-left: 5%;
+      width: 430px;
+      @media screen and (max-width: 820px) {
+        margin-top: 40px;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+
+      h3, p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+
+      span {
+        color: $teal900;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: $grey900;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 2em;
+        line-height: 27px;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+
+      a {
+        button {
+          width: 95%;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
 }
 
 .home-section-3 {
@@ -143,9 +317,68 @@ html, body {
   }
 }
 
-// ============== Responsiveness and Mobile ===============
-@media (min-width: 600px) {
-  .navbar-wrapper .navbar {
-    min-height: 64px;
+.home-section-4 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    @media screen and (max-width: 820px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .image {
+      svg {
+        font-size: 12em;
+      }
+    }
+
+    .text {
+      margin-left: 5%;
+      width: 430px;
+      @media screen and (max-width: 820px) {
+        margin-top: 40px;
+      }
+
+      @media screen and (max-width: 450px) {
+        width: 100%;
+      }
+
+      h3, p {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+
+      span {
+        color: $teal900;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: $grey900;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 2em;
+        line-height: 27px;
+      }
+
+      p {
+        font-size: 1.3em;
+      }
+
+      a {
+        button {
+          width: 95%;
+          margin-top: 15px;
+        }
+      }
+    }
   }
 }
