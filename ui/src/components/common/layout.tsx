@@ -3,6 +3,9 @@ import Head from 'next/head';
 import Navbar from 'ui/src/components/common/navbar';
 import Footer from 'ui/src/components/footer';
 import 'ui/src/styles/app.scss';
+import Card from 'ui/src/components/material-ui/card';
+import { PORTFOLIO } from 'ui/src/constants/portfolio';
+import bgImg from 'ui/src/assets/images/do-something-great.jpg';
 
 function Layout(props: any) {
   return (
@@ -15,6 +18,16 @@ function Layout(props: any) {
       </Head>
       <Navbar />
       {props.children}
+      <div className="modal-wrapper">
+        <form className="modal-form">
+          <Card 
+            image={bgImg}
+            title={PORTFOLIO[0].title}
+            description={PORTFOLIO[0].description}
+            isModal
+          />
+        </form>
+      </div>
       <Footer />
     </div>
   );

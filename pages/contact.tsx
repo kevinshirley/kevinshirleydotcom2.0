@@ -5,6 +5,8 @@ function Contact() {
   return (
     <Layout>
       contact page
+      <br/>
+      coming soon
     </Layout>
   );
 };

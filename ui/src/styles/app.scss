@@ -8,6 +8,7 @@ $teal300: #4db6ac;
 $teal100: #b2dfdb;
 
 $grey900: #212121;
+$grey100: #f5f5f5;
 
 // Mixins
 @mixin home-section-1-bg {
@@ -30,6 +31,11 @@ $grey900: #212121;
   width: 100%;
 }
 
+@mixin label {
+  color: $teal900;
+  font-weight: bold;
+}
+
 // Navbar settings
 $navbar_top: $teal650;
 $navbar_bottom: $teal500;
@@ -46,8 +52,13 @@ a {
   text-decoration: none;
 }
 
+h3, p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
 .container {
-  @include full-width;
+  @include full-width();
 }
 
 .row {
@@ -67,18 +78,85 @@ a {
   }
 }
 
+.label {
+  @include label();
+}
+
+.card-width {
+  width: 320px;
+
+  @media screen and (max-width: 370px) {
+    width: 100%;
+  }
+}
+
+.card {
+  border-radius: 26px !important;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+
+  .MuiCardActions-root {
+    padding: 14px;
+
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.modal-width {
+  width: 500px;
+
+  @media screen and (max-width: 510px) {
+    width: 100%;
+  }
+}
+
+.modal-wrapper {
+  display: block;
+  position: fixed;
+  z-index: 500;
+  background: rgba($color: #000000, $alpha: 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+
+  .modal-form {
+    width: 100%;
+    height: 100%;
+
+    .modal {
+      min-height: 700px;
+      border-radius: 35px;
+      margin: 20px auto;
+
+      .MuiCardActions-root {
+        padding: 14px;
+    
+        button {
+          width: 100%;
+          padding: 14px;
+        }
+      }
+    }
+  }
+}
+
 // Components
 .navbar-wrapper {
-  @include full-width;
+  @include full-width();
 
   .top-navbar {
-    @include full-width;
+    @include full-width();
     height: 24px;
     background: $navbar_top;
   }
 
   .navbar {
-    @include full-width;
+    @include full-width();
     min-height: 56px;
     background: $navbar_bottom;
     display: flex;
@@ -100,7 +178,7 @@ a {
         }
 
         .menu-core-icon {
-          font-size: 3em;
+          font-size: 3.5em;
         }
       }
   
@@ -109,7 +187,7 @@ a {
         height: 40px;
   
         img {
-          @include full-width;
+          @include full-width();
           height: 100%;
         }
       }
@@ -117,7 +195,7 @@ a {
       .links {
         display: flex;
         justify-content: flex-end;
-        @include full-width;
+        @include full-width();
         margin-block-start: 0;
         margin-block-end: 0;
         margin-inline-end: 0px;
@@ -146,7 +224,7 @@ a {
 }
 
 .home-section-1 {
-  @include full-width;
+  @include full-width();
   height: auto;
   @include home-section-1-bg;
   display: flex;
@@ -191,6 +269,10 @@ a {
       color: $white;
       margin-bottom: 25px;
 
+      .MuiGrid-spacing-xs-1 {
+        @include full-width();
+      }
+
       .MuiInput-underline:before {
         border-bottom: 1px solid $white;
         
@@ -215,18 +297,18 @@ a {
     height: auto;
     width: 800px;
     @media screen and (max-width: 650px) {
-      @include full-width;
+      @include full-width();
     }
 
     img {
-      @include full-width;
+      @include full-width();
       height: 100%;
     }
   }
 }
 
 .home-section-2 {
-  @include full-width;
+  @include full-width();
   height: auto;
   display: flex;
   justify-content: center;
@@ -278,17 +360,11 @@ a {
       }
 
       @media screen and (max-width: 450px) {
-        @include full-width;
-      }
-
-      h3, p {
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include full-width();
       }
 
       span {
-        color: $teal900;
-        font-weight: bold;
+        @include label;
       }
 
       h3 {
@@ -314,16 +390,51 @@ a {
 }
 
 .home-section-3 {
-  .background-image-container {
-    img {
-      @include full-width;
-      height: 100%;
+  @include full-width();
+  background: $grey100;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+    .header {
+      span {
+        @include label;
+      }
+
+      h3 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        color: $grey900;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 2em;
+        line-height: 27px;
+      }
+    }
+
+    .cards {
+      @include full-width();
+      display: flex;
+      justify-content: center;
+      overflow-x: scroll;
+      margin-top: 25px;
+      
+      .image-slide {
+        .length-index {
+          margin-top: 30px;
+        }
+      }
     }
   }
 }
 
 .home-section-4 {
-  @include full-width;
+  @include full-width();
   height: auto;
   display: flex;
   justify-content: center;
@@ -353,7 +464,7 @@ a {
       }
 
       @media screen and (max-width: 450px) {
-        @include full-width;
+        @include full-width();
       }
 
       h3, p {
@@ -362,8 +473,7 @@ a {
       }
 
       span {
-        color: $teal900;
-        font-weight: bold;
+        @include label;
       }
 
       h3 {
@@ -389,10 +499,12 @@ a {
 }
 
 .footer-section-1 {
-  @include full-width;
+  @include full-width();
+  background: $grey100;
   display: flex;
   justify-content: space-around;
-  padding-top: 50px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   .container {
     display: flex;
@@ -401,12 +513,11 @@ a {
     width: 200px;
 
     .label {
-      color: $teal900;
-      font-weight: bold;
+      @include label();
     }
   
     .icons {
-      @include full-width;
+      @include full-width();
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -434,7 +545,7 @@ a {
 }
 
 .footer-section-2 {
-  @include full-width;
+  @include full-width();
   display: flex;
   justify-content: space-around;
   margin: 40px 0;
@@ -452,9 +563,9 @@ a {
 }
 
 .footer-section-3 {
-  @include full-width;
+  @include full-width();
   background: $teal900;
   color: $white;
-  padding: 8px 0 8px 10px;
+  padding: 8px 0;
   text-align: center;
 }

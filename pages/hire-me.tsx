@@ -5,6 +5,8 @@ function HireMe() {
   return (
     <Layout>
       Hire Me page
+      <br/>
+      coming soon
     </Layout>
   );
 };

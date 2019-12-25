@@ -6,6 +6,8 @@ function Services() {
   return (
     <Layout>
       services page
+      <br/>
+      coming soon
     </Layout>
   );
 };

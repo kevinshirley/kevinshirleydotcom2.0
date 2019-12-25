@@ -19,7 +19,7 @@ export const IPHONE_ICON: JSX.Element = (
 );
 
 export const MENU: JSX.Element = (
-  <Icon className="menu-core-icon">menu</Icon>
+  <span className="iconify menu-core-icon" data-icon="bx:bx-menu-alt-left" data-inline="false"></span>
 );
 
 export const TOP_DRAWER_MENU = [
