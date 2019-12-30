@@ -68,7 +68,6 @@ MediaSlider.proptypes = {
 
 export function CardSlider(props: any) {
   const { cards } = props;
-  console.log('card slider prop cards', cards);
   const [slides] = useState(cards);
   const [slide, setSlide] = useState(slides[0]);
 
@@ -103,7 +102,7 @@ export function CardSlider(props: any) {
   )
 }
 
-MediaSlider.proptypes = {
+CardSlider.proptypes = {
   index: PropTypes.string,
   url: PropTypes.string,
   alt: PropTypes.string,
