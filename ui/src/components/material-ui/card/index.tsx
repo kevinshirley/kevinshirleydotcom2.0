@@ -9,7 +9,14 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 export default function ImgMediaCard(props: any) {
-  const { title, description, image, isModal, isCard } = props;
+  const { 
+    title, 
+    description, 
+    image, 
+    isModal, 
+    isCard, 
+    openModal,
+  } = props;
 
   const cardClasses = cx({
     'card': isCard,
@@ -20,7 +27,7 @@ export default function ImgMediaCard(props: any) {
 
   return (
     <Card className={cardClasses}>
-      <CardActionArea>
+      <CardActionArea onClick={openModal}>
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
@@ -39,7 +46,7 @@ export default function ImgMediaCard(props: any) {
                 <p>{description}</p>
               </div>
             ) : (
-              <React.Fragment>
+              <>
                 <div className="project">
                   <span className="label">Project</span>
                   <span>{description}</span>
@@ -48,17 +55,24 @@ export default function ImgMediaCard(props: any) {
                   <span className="label">Tech Stack</span>
                   <span>{description}</span>
                 </div>
-              </React.Fragment>
+              </>
             )}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button 
+          size="small"
+          color="primary" 
+          onClick={isCard ? openModal : null}
+        >
           {isCard ? 'Details' : 'View Project'}
         </Button>
         {isModal && (
-          <Button size="small" color="primary">
+          <Button 
+            size="small"
+            color="primary"
+          >
             View Code
           </Button>
         )}

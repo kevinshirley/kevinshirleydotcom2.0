@@ -1,10 +1,8 @@
 import React from 'react';
-import bgImg from 'ui/src/assets/images/do-something-great.jpg';
-import Card from 'ui/src/components/material-ui/card';
 import { CardSlider } from 'ui/src/components/common/mobile-card-slider';
 import { PORTFOLIO } from 'ui/src/constants/portfolio';
 
-function HomeSection3() {
+function HomeSection3({ openModal, selectPortfolio }) {
   return (
     <div className='home-section-3'>
       <div className="content">
@@ -13,7 +11,11 @@ function HomeSection3() {
           <h3>Portfolio</h3>
         </div>
         <div className="cards">
-          <CardSlider cards={PORTFOLIO} />
+          <CardSlider 
+            cards={PORTFOLIO} 
+            openModal={openModal} 
+            selectPortfolio={selectPortfolio}
+          />
         </div>
       </div>
     </div>

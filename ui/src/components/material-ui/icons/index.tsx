@@ -9,6 +9,7 @@ import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 export const PORTFOLIO_ICON: JSX.Element = (
   <BurstModeOutlinedIcon />
@@ -16,6 +17,10 @@ export const PORTFOLIO_ICON: JSX.Element = (
 
 export const IPHONE_ICON: JSX.Element = (
   <PhoneIphoneIcon />
+);
+
+export const CLOSE_ICON: JSX.Element = (
+  <HighlightOffIcon />
 );
 
 export const MENU: JSX.Element = (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import 'ui/src/styles/touch-mobile-card-slider.scss';
 import shuffle from 'ui/src/utils/shuffle-array';
@@ -67,7 +67,7 @@ MediaSlider.proptypes = {
 };
 
 export function CardSlider(props: any) {
-  const { cards } = props;
+  const { cards, openModal, selectPortfolio } = props;
   const [slides] = useState(cards);
   const [slide, setSlide] = useState(slides[0]);
 
@@ -81,6 +81,10 @@ export function CardSlider(props: any) {
     setSlide(slides[newIndex]);
   }
 
+  useEffect(() => {
+    selectPortfolio(slide.index);
+  }, [slide]);
+
   return (
     <div className="image-slide">
       <Card 
@@ -88,6 +92,7 @@ export function CardSlider(props: any) {
         title={slide.title}
         description={slide.description}
         isCard
+        openModal={openModal}
       />
       <div className="buttons">
         <button onClick={() => prevSlide()} disabled={slide.index === 0}>

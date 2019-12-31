@@ -1,9 +1,12 @@
-import { all } from 'redux-saga/effects';
+import { all, fork } from 'redux-saga/effects';
 import 'isomorphic-unfetch';
-import placeholderSaga from 'ui/src/store/sagas/placeholder';
+import { watchOpenModal, watchCloseModal } from 'ui/src/store/sagas/ui';
 
 function* rootSaga() {
-  yield all([placeholderSaga]);
+  yield all([
+    watchOpenModal(),
+    watchCloseModal(),
+  ]);
 }
 
 export default rootSaga;

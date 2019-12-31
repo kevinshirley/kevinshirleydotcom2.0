@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import placeholder from 'ui/src/store/reducers/placeholder';
+import ui from 'ui/src/store/reducers/ui';
 
 export default combineReducers({
-  placeholder,
+  ui,
 });

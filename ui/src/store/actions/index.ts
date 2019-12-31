@@ -1,23 +1,28 @@
-export const actionTypes = {
-  LOAD_DATA: 'LOAD_DATA',
-  LOAD_DATA_SUCCESS: 'LOAD_DATA_SUCCESS',
-  LOAD_DATA_ERROR: 'LOAD_DATA_ERROR',
+export function createTypes(base, types) {
+  const res = {};
+  types.forEach(type => {
+    res[type] = `${base}_${type}`;
+  });
+  return res;
 }
 
-export function loadData() {
-  return { type: actionTypes.LOAD_DATA }
-}
+export const action = (type: any, payload = {}, meta = {}) => ({
+  type,
+  payload,
+  meta,
+});
 
-export function loadDataSuccess(data) {
-  return {
-    type: actionTypes.LOAD_DATA_SUCCESS,
-    data,
-  }
-}
+export const UI: any = createTypes('UI', [
+  'OPEN_MODAL',
+  'CLOSE_MODAL',
+  'IS_MODAL_OPENED',
+  'IS_MODAL_CLOSED',
+  'SELECT_PORTFOLIO',
+]);
 
-export function loadDataError(error) {
-  return {
-    type: actionTypes.LOAD_DATA_ERROR,
-    error,
-  }
-}
+export const ui = {
+  openModal: () => action(UI.OPEN_MODAL),
+  closeModal: () => action(UI.CLOSE_MODAL),
+  setModalOpened: () => action(UI.IS_MODAL_OPENED),
+  selectPortfolio: (index: number) => action(UI.SELECT_PORTFOLIO, index),
+};

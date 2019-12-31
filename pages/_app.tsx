@@ -8,6 +8,7 @@ import App from 'next/app';
 import configureStore from 'ui/src/store';
 import Layout from 'ui/src/components/common/layout';
 import Navbar from 'ui/src/components/common/navbar';
+import Modal from 'ui/src/components/common/modal';
 import Footer from 'ui/src/components/footer';
 
 function Root({ Component, pageProps, store }) {
@@ -17,6 +18,7 @@ function Root({ Component, pageProps, store }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Modal />
       <Footer />
     </Provider>
   );
@@ -29,7 +31,9 @@ Root.getInitialProps = (async ({ Component, ctx }) => {
     pageProps = await Component.getInitialProps(ctx);
   }
 
-  return { pageProps };
+  return { 
+    pageProps
+  };
 }) as typeof App.getInitialProps;
 
 // @ts-ignore
