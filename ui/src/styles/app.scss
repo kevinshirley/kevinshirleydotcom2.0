@@ -65,6 +65,11 @@ h3, p {
   display: block;
 }
 
+.divider {
+  width: 100%;
+  margin: 20px auto;
+}
+
 #rounded-button {
   background: $teal900 !important;
   cursor: pointer;
@@ -103,6 +108,10 @@ h3, p {
       width: 100%;
     }
   }
+
+  .MuiCardMedia-media {
+    height: 100%;
+  }
 }
 
 .modal-width {
@@ -133,6 +142,7 @@ h3, p {
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow-y: scroll;
 
       .close-modal {
         width: 100%;
@@ -151,6 +161,8 @@ h3, p {
       .modal {
         min-height: 450px;
         border-radius: 35px;
+        overflow-y: scroll;
+        padding-bottom: 15px;
   
         .MuiCardActions-root {
           padding: 14px;
@@ -160,6 +172,14 @@ h3, p {
             padding: 14px;
           }
         }
+
+        .MuiCardMedia-media {
+          height: 100%;
+        }
+      }
+
+      #text {
+        color: transparent;
       }
     }
   }

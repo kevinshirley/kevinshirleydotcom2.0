@@ -19,7 +19,7 @@ function Navbar() {
             </Link>
           </div>
           <ul className="links">
-            <li className="link"><Link href="portfolio">{IPHONE_ICON}</Link></li>
+            <li className="link"><a href="tel:+15144334978">{IPHONE_ICON}</a></li>
           </ul>
         </div>
       </div>
