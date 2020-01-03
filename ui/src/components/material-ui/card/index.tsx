@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { OPEN_IN_NEW_ICON, CODE_ICON } from 'ui/src/components/material-ui/icons';
 
 export default function ImgMediaCard(props: any) {
   const { 
@@ -16,6 +17,8 @@ export default function ImgMediaCard(props: any) {
     isModal, 
     isCard, 
     openModal,
+    projectUrl,
+    codeUrl,
   } = props;
 
   const cardClasses = cx({
@@ -39,20 +42,23 @@ export default function ImgMediaCard(props: any) {
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="div">
             {isCard ? (
               <div className="project">
                 <span className="label">Project</span>
-                <p>{description}</p>
+                <br></br>
+                <span>{description}</span>
               </div>
             ) : (
               <>
                 <div className="project">
                   <span className="label">Project</span>
+                  <br></br>
                   <span>{description}</span>
                 </div>
                 <div className="tech-stack">
                   <span className="label">Tech Stack</span>
+                  <br></br>
                   <span>{description}</span>
                 </div>
               </>
@@ -61,20 +67,31 @@ export default function ImgMediaCard(props: any) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button 
-          size="small"
-          color="primary" 
-          onClick={isCard ? openModal : null}
-        >
-          {isCard ? 'Details' : 'View Project'}
-        </Button>
-        {isModal && (
+        {isCard && (
           <Button 
             size="small"
-            color="primary"
+            className="card-cta"
+            color="primary" 
+            onClick={isCard ? openModal : null}
           >
-            View Code
+            Details
           </Button>
+        )}
+        {isModal && (
+          <>
+            <Button 
+              size="small"
+              color="primary"
+            >
+              <a href={projectUrl} target="_blank">{OPEN_IN_NEW_ICON}&ensp;&ensp;Visit Project</a>
+            </Button>
+            <Button 
+              size="small"
+              color="primary"
+            >
+              <a href={codeUrl} target="_blank">{CODE_ICON}&ensp;&ensp;View Code</a>
+            </Button>
+          </>
         )}
       </CardActions>
     </Card>

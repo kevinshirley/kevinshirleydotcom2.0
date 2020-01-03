@@ -10,6 +10,8 @@ import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import CodeIcon from '@material-ui/icons/Code';
 
 export const PORTFOLIO_ICON: JSX.Element = (
   <BurstModeOutlinedIcon />
@@ -25,6 +27,14 @@ export const CLOSE_ICON: JSX.Element = (
 
 export const MENU: JSX.Element = (
   <span className="iconify menu-core-icon" data-icon="bx:bx-menu-alt-left" data-inline="false"></span>
+);
+
+export const OPEN_IN_NEW_ICON: JSX.Element = (
+  <OpenInNewIcon />
+);
+
+export const CODE_ICON: JSX.Element = (
+  <CodeIcon />
 );
 
 export const TOP_DRAWER_MENU = [

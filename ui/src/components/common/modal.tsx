@@ -10,8 +10,18 @@ import { PORTFOLIO } from 'ui/src/constants/portfolio';
 
 function Modal({ isModalOpened, closeModal, selectedPortfolio }) {
   const modalWrapperStyle = { display: isModalOpened ? 'block' : 'none' };
-  console.log('selectedPortfolio', selectedPortfolio);
-  {selectedPortfolio === 0 && console.log('PORTFOLIO[selectedPortfolio].title', PORTFOLIO[selectedPortfolio].title)}
+  
+  const ModalUI = () => {selectedPortfolio && (
+    <Card 
+      image={PORTFOLIO[selectedPortfolio].image}
+      title={PORTFOLIO[selectedPortfolio].title}
+      description={PORTFOLIO[selectedPortfolio].description}
+      projectUrl={PORTFOLIO[selectedPortfolio].projectUrl}
+      codeUrl={PORTFOLIO[selectedPortfolio].codeUrl}
+      isModal
+    />
+  )};
+
   return (
     <div 
       className="modal-wrapper" 
@@ -27,6 +37,8 @@ function Modal({ isModalOpened, closeModal, selectedPortfolio }) {
               image={PORTFOLIO[selectedPortfolio].image}
               title={PORTFOLIO[selectedPortfolio].title}
               description={PORTFOLIO[selectedPortfolio].description}
+              projectUrl={PORTFOLIO[selectedPortfolio].projectUrl}
+              codeUrl={PORTFOLIO[selectedPortfolio].codeUrl}
               isModal
             />
           )}
@@ -36,6 +48,8 @@ function Modal({ isModalOpened, closeModal, selectedPortfolio }) {
               image={PORTFOLIO[selectedPortfolio].image}
               title={PORTFOLIO[selectedPortfolio].title}
               description={PORTFOLIO[selectedPortfolio].description}
+              projectUrl={PORTFOLIO[selectedPortfolio].projectUrl}
+              codeUrl={PORTFOLIO[selectedPortfolio].codeUrl}
               isModal
             />
           )}
