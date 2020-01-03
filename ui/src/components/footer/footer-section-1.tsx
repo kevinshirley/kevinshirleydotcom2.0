@@ -8,7 +8,7 @@ function FooterSection1() {
         <span className="label">Stay Connected</span>
         <div className="icons">
           {FOOTER_SOCIAL_ICON.map((icon, index) => (
-            <a href={icon.url} key={index}>{icon.icon}</a>
+            <a href={icon.url} key={index} target="_blank">{icon.icon}</a>
           ))}
         </div>
       </div>
