@@ -72,7 +72,7 @@ export default function ImgMediaCard(props: any) {
             size="small"
             className="card-cta"
             color="primary" 
-            onClick={isCard ? openModal : null}
+            onClick={openModal}
           >
             Details
           </Button>
