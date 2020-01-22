@@ -10,6 +10,11 @@
             "StackName": "amplify-kevinshirley-dev-212829",
             "StackId": "arn:aws:cloudformation:us-east-1:518889762667:stack/amplify-kevinshirley-dev-212829/e174c340-3cbe-11ea-a0d5-0a6046b66d41",
             "AmplifyAppId": "d2s6e29i78vlv0"
+        },
+        "categories": {
+            "auth": {
+                "kevinshirley482a9750": {}
+            }
         }
     }
 }

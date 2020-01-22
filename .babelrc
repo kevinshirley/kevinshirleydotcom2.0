@@ -4,7 +4,7 @@
       "module-resolver", {
         "root": ["./"],
         "alias": {
-          "ui": "./ui"
+          "src": "./src"
         },
         "extensions": [".js", ".jsx", ".tsx"]
       }

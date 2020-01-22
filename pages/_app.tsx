@@ -43,4 +43,5 @@ Root.getInitialProps = (async ({ Component, ctx }) => {
 }) as typeof App.getInitialProps;
 
 // @ts-ignore
-export default withRedux(configureStore)(withReduxSaga(Root));
+const AuthRoot = withAuthenticator(Root, true);
+export default withRedux(configureStore)(withReduxSaga(AuthRoot));
