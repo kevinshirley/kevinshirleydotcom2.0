@@ -8,7 +8,7 @@ module.exports = withImages(
       autoPrerender: false,
     },
     webpack(config, options) {
-      config.resolve.alias['ui'] = path.join(__dirname, 'ui');
+      config.resolve.alias['src'] = path.join(__dirname, 'src');
       config.resolve.extensions.push('.ts', '.tsx');
       return config;
     },

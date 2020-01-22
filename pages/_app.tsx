@@ -5,11 +5,17 @@ import withRedux from 'next-redux-wrapper';
 import withReduxSaga from 'next-redux-saga';
 import App from 'next/app';
 
-import configureStore from 'ui/src/store';
-import Layout from 'ui/src/components/common/layout';
-import Navbar from 'ui/src/components/common/navbar';
-import Modal from 'ui/src/components/common/modal';
-import Footer from 'ui/src/components/footer';
+import configureStore from 'src/store';
+import Layout from 'src/components/common/layout';
+import Navbar from 'src/components/common/navbar';
+import Modal from 'src/components/common/modal';
+import Footer from 'src/components/footer';
+
+import Amplify from 'aws-amplify';
+import awsconfig from 'src/aws-exports';
+import { withAuthenticator } from 'aws-amplify-react';
+
+Amplify.configure(awsconfig);
 
 function Root({ Component, pageProps, store }) {
   return (

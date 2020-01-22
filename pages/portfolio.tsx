@@ -1,5 +1,5 @@
 import React from 'react';
-import PortfolioPage from 'ui/src/components/portfolio';
+import PortfolioPage from 'src/components/portfolio';
 
 function Portfolio() {
   return (
