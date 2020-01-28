@@ -16,5 +16,23 @@
                 "kevinshirley482a9750": {}
             }
         }
+    },
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-kevinshirley-master-233657-authRole",
+            "UnauthRoleArn": "arn:aws:iam::518889762667:role/amplify-kevinshirley-master-233657-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::518889762667:role/amplify-kevinshirley-master-233657-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-kevinshirley-master-233657-deployment",
+            "UnauthRoleName": "amplify-kevinshirley-master-233657-unauthRole",
+            "StackName": "amplify-kevinshirley-master-233657",
+            "StackId": "arn:aws:cloudformation:us-east-1:518889762667:stack/amplify-kevinshirley-master-233657/7d199f30-3ff5-11ea-8a7b-126c97cb5bc1",
+            "AmplifyAppId": "d2s6e29i78vlv0"
+        },
+        "categories": {
+            "auth": {
+                "kevinshirley482a9750": {}
+            }
+        }
     }
 }
