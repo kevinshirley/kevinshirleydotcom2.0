@@ -560,6 +560,14 @@ h3, p {
 
 .about-section-1 {
   margin: 25px;
+
+  span {
+    @include label;
+  }
+
+  h2 {
+    margin-block-start: 0;
+  }
 }
 
 .about-section-2 {
