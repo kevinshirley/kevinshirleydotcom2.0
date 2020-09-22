@@ -78,16 +78,6 @@ export default function TemporaryDrawer() {
         ))}
       </List>
       <Divider />
-      <List>
-        {BOTTOM_DRAWER_MENU.map((obj, index) => (
-          <Link href={obj.pathname} key={index}>
-            <ListItem button>
-              <ListItemIcon>{obj.icon}</ListItemIcon>
-              <ListItemText primary={obj.label} />
-            </ListItem>
-          </Link>
-        ))}
-      </List>
     </div>
   );
 

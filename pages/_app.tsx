@@ -9,13 +9,8 @@ import configureStore from 'src/store';
 import Layout from 'src/components/common/layout';
 import Navbar from 'src/components/common/navbar';
 import Modal from 'src/components/common/modal';
+import ScheduleModal from 'src/components/common/schedule-modal';
 import Footer from 'src/components/footer';
-
-import Amplify from 'aws-amplify';
-import awsconfig from 'src/aws-exports';
-import { withAuthenticator } from 'aws-amplify-react';
-
-Amplify.configure(awsconfig);
 
 function Root({ Component, pageProps, store }) {
   return (
@@ -25,6 +20,7 @@ function Root({ Component, pageProps, store }) {
         <Component {...pageProps} />
       </Layout>
       <Modal />
+      <ScheduleModal />
       <Footer />
     </Provider>
   );
@@ -43,5 +39,6 @@ Root.getInitialProps = (async ({ Component, ctx }) => {
 }) as typeof App.getInitialProps;
 
 // @ts-ignore
-const AuthRoot = withAuthenticator(Root, true);
-export default withRedux(configureStore)(withReduxSaga(AuthRoot));
+// const AuthRoot = withAuthenticator(Root, true);
+// export default withRedux(configureStore)(withReduxSaga(AuthRoot));
+export default withRedux(configureStore)(withReduxSaga(Root));

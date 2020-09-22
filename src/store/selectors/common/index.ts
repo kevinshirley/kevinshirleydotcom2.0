@@ -6,6 +6,11 @@ const selectIsModalOpened = R.pathOr('', [
   'isModalOpened',
 ]);
 
+const selectIsScheduleModalOpened = R.pathOr('', [
+  'ui',
+  'isScheduleModalOpened',
+]);
+
 const selectSelectedPortfolio = R.pathOr('', [
   'ui',
   'selectedPortfolio',
@@ -13,5 +18,6 @@ const selectSelectedPortfolio = R.pathOr('', [
 
 export default createStructuredSelector({
   isModalOpened: selectIsModalOpened,
+  isScheduleModalOpened: selectIsScheduleModalOpened,
   selectedPortfolio: selectSelectedPortfolio,
 });

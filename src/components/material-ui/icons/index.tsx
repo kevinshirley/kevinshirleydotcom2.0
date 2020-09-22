@@ -44,14 +44,9 @@ export const TOP_DRAWER_MENU = [
     pathname: '/',
   },
   {
-    icon: PORTFOLIO_ICON,
-    label: 'Portfolio',
-    pathname: '/portfolio',
-  },
-  {
-    icon: <StorefrontOutlinedIcon />,
-    label: 'Services',
-    pathname: '/services',
+    icon: <InfoIcon />,
+    label: 'About',
+    pathname: '/about',
   },
 ];
 

@@ -4,7 +4,7 @@ import { PORTFOLIO } from 'src/constants/portfolio';
 
 function HomeSection3({ openModal, selectPortfolio }) {
   return (
-    <div className='home-section-3'>
+    <div className='home-section-3' id='portfolio'>
       <div className="content">
         <div className="header">
           <span>The Breakdown</span>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as R from 'ramda';
 import * as actions from 'src/store/actions';
 import bgImg from 'src/assets/images/do-something-great.jpg';
 import Card from 'src/components/material-ui/card';

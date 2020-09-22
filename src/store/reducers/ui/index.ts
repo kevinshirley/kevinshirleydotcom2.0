@@ -12,6 +12,17 @@ function isModalOpened(state = false, { type }) {
   }
 }
 
+function isScheduleModalOpened(state = false, { type }) {
+  switch (type) {
+    case UI.OPEN_SCHEDULE_MODAL:
+      return true;
+    case UI.CLOSE_SCHEDULE_MODAL:
+      return false;
+    default:
+      return state;
+  }
+}
+
 function selectedPortfolio(state = null, { type, payload }) {
   switch (type) {
     case UI.SELECT_PORTFOLIO:
@@ -23,5 +34,6 @@ function selectedPortfolio(state = null, { type, payload }) {
 
 export default combineReducers({
   isModalOpened,
+  isScheduleModalOpened,
   selectedPortfolio,
 });
