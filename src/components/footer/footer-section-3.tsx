@@ -1,9 +1,11 @@
 import React from 'react';
 
 function FooterSection3() {
+  const today = new Date(), year = today.getFullYear();
+
   return (
     <div className="footer-section-3">
-      <small>© 2019 Kevin Shirley, All rights reserved.</small>
+      <small>© {year} Kevin Shirley, All rights reserved.</small>
     </div>
   );
 };
