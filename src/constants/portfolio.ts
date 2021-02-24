@@ -6,18 +6,27 @@ import shoptripimagine from 'src/assets/images/shoptripimagine.png';
 import addressbook from 'src/assets/images/addressbook.png';
 import travelDashboard from 'src/assets/images/travel-dashboard.png';
 import autoturbobuying from 'src/assets/images/autoturbobuying.png';
+import billmate from 'src/assets/images/bill-mate-accounting-software.png';
 
 export const PORTFOLIO = [
   {
     index: 0,
-    title: 'Travel Dashboard',
-    description: 'Web application to manage travel itineraries',
-    image: travelDashboard,
-    projectUrl: 'https://travel-dashboard-landing-page.vercel.app/en',
-    codeUrl: 'https://github.com/kevinshirley/travel-dashboard',
+    title: 'Billmate | Business Accounting CRM',
+    description: 'Accounting software for businesses, coupled with stunning a CRM and a scheduling tool.',
+    image: billmate,
+    projectUrl: 'https://billmate.io',
+    codeUrl: 'https://github.com/kevinshirley/billmate',
   },
   {
     index: 1,
+    title: 'Travel Dashboard',
+    description: 'Web application to manage travel itineraries',
+    image: travelDashboard,
+    projectUrl: 'https://tripimagine.com/en',
+    codeUrl: 'https://github.com/kevinshirley/travel-dashboard2.0',
+  },
+  {
+    index: 2,
     title: 'Tic Tac Toe Game',
     description: 'Made with React',
     image: tictactoe,
@@ -25,15 +34,15 @@ export const PORTFOLIO = [
     codeUrl: 'https://github.com/kevinshirley/tictactoe',
   },
   {
-    index: 2,
+    index: 3,
     title: 'Trip Imagine | Travel Agency',
     description: 'Made with React',
     image: tripimagine,
-    projectUrl: 'http://www.tripimagine.com/',
+    projectUrl: 'https://tripimagine.com/',
     codeUrl: 'https://github.com/kevinshirley/tripimagine2.0',
   },
   {
-    index: 3,
+    index: 4,
     title: 'Taquin Puzzle Game',
     description: 'Made with React',
     image: taquin,
@@ -41,7 +50,7 @@ export const PORTFOLIO = [
     codeUrl: 'https://github.com/kevinshirley/taquinPuzzle',
   },
   {
-    index: 4,
+    index: 5,
     title: 'Poker Cards Game',
     description: 'Made with Angular',
     image: pokergame,
@@ -49,15 +58,15 @@ export const PORTFOLIO = [
     codeUrl: 'https://www.github.com/kevinshirley',
   },
   {
-    index: 5,
+    index: 6,
     title: 'Trip Imagine Shop',
     description: 'Made with PHP',
     image: shoptripimagine,
-    projectUrl: 'https://shop.tripimagine.com/',
+    projectUrl: 'https://kevinshirley.com/',
     codeUrl: 'https://www.github.com/kevinshirley',
   },
   {
-    index: 6,
+    index: 7,
     title: 'Address Book',
     description: 'Made with Angular',
     image: addressbook,
@@ -65,7 +74,7 @@ export const PORTFOLIO = [
     codeUrl: 'https://github.com/kevinshirley/addressbook',
   },
   {
-    index: 7,
+    index: 8,
     title: 'Auto Turbo',
     description: 'Made with React',
     image: autoturbobuying,
