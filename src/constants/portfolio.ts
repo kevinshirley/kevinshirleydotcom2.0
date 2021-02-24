@@ -12,7 +12,7 @@ export const PORTFOLIO = [
   {
     index: 0,
     title: 'Billmate | Business Accounting CRM',
-    description: 'Accounting software for businesses, coupled with stunning a CRM and a scheduling tool.',
+    description: 'Accounting software for businesses, coupled with a stunning CRM and a scheduling tool.',
     image: billmate,
     projectUrl: 'https://billmate.io',
     codeUrl: 'https://github.com/kevinshirley/billmate',
