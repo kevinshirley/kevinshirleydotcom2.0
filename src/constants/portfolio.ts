@@ -70,7 +70,7 @@ export const PORTFOLIO = [
     title: 'Address Book',
     description: 'Made with Angular',
     image: addressbook,
-    projectUrl: 'http://addressbook.kevinshirley.com/',
+    projectUrl: 'https://addressbook-ten.vercel.app/',
     codeUrl: 'https://github.com/kevinshirley/addressbook',
   },
   {
