@@ -30,7 +30,7 @@ export const PORTFOLIO = [
     title: 'Tic Tac Toe Game',
     description: 'Made with React',
     image: tictactoe,
-    projectUrl: 'http://tictactoe.kevinshirley.com/',
+    projectUrl: 'https://tictactoe-sigma.vercel.app',
     codeUrl: 'https://github.com/kevinshirley/tictactoe',
   },
   {
