@@ -54,7 +54,7 @@ export const PORTFOLIO = [
     title: 'Poker Cards Game',
     description: 'Made with Angular',
     image: pokergame,
-    projectUrl: 'http://poker.kevinshirley.com/',
+    projectUrl: 'http://kevinshirley.com/',
     codeUrl: 'https://www.github.com/kevinshirley',
   },
   {
@@ -62,7 +62,7 @@ export const PORTFOLIO = [
     title: 'Trip Imagine Shop',
     description: 'Made with PHP',
     image: shoptripimagine,
-    projectUrl: 'https://kevinshirley.com/',
+    projectUrl: 'http://kevinshirley.com/',
     codeUrl: 'https://www.github.com/kevinshirley',
   },
   {
