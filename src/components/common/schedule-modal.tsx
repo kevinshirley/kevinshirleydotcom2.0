@@ -20,7 +20,7 @@ function ScheduleModal({ isScheduleModalOpened, closeScheduleModal }) {
           <div className="close-modal">
             <span onClick={closeScheduleModal}>{CLOSE_ICON}</span>
           </div>
-          <iframe src="https://meetingbird.com/m/B1gVCsLBD" style={{ width: '90%', border: 'none', minHeight: '550px', borderRadius: '20px' }}></iframe>
+          <iframe src="https://calendly.com/kevinxshirley/30min" style={{ width: '90%', border: 'none', minHeight: '550px', borderRadius: '20px' }}></iframe>
           <div className="divider"></div>
         </div>
       </form>
