@@ -35,11 +35,11 @@ export const PORTFOLIO = [
   },
   {
     index: 3,
-    title: 'Trip Imagine | Travel Agency',
-    description: 'Made with React',
+    title: 'Travel Agency',
+    description: 'Made with Next.js/React',
     image: tripimagine,
-    projectUrl: 'https://tripimagine.com/',
-    codeUrl: 'https://github.com/kevinshirley/tripimagine2.0',
+    projectUrl: 'https://tripimagine2-1.vercel.app/',
+    codeUrl: 'https://github.com/kevinshirley/tripimagine2.1',
   },
   {
     index: 4,
