@@ -46,7 +46,7 @@ export const PORTFOLIO = [
     title: 'Taquin Puzzle Game',
     description: 'Made with React',
     image: taquin,
-    projectUrl: 'http://taquin.kevinshirley.com/',
+    projectUrl: 'http://kevinshirley.com/',
     codeUrl: 'https://github.com/kevinshirley/taquinPuzzle',
   },
   {
